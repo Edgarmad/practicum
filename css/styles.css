@@ -1,0 +1,530 @@
+:root {
+    /*--fuentePrincipal: 'Staatliches', cursive;*/
+    --azul: #1282a2;
+    --azulOscuro: #0a1128;
+    --white: #ffffff;
+    --black: #121014;
+    --naranja: #FF5900;
+    --naranjaOscuro: #ac3c00;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*con esto 1rem = 10px*/
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--black);
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* Globales */
+
+.contenedor {
+    text-align: center;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.centrar-pantalla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /*background-color: #151b29;*/
+}
+
+.centrar-texto {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.centrar {
+    margin: 0 auto;
+}
+
+.izquierda {
+    text-align: left;
+}
+
+.derecha {
+    text-align: right;
+}
+
+.carta {
+    text-align: center;
+    background: var(--white);
+    width: 410px;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.carta-xl {
+    background: var(--white);
+    width: 100%;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: .5rem 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    border: solid 2px var(--azul);
+    transition: all .5s;
+}
+
+.btn-2 {
+    padding: .5rem 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--azulOscuro);
+}
+
+.btn-azul {
+    background-color: blue;
+    font-weight: 100;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+}
+
+.logo {
+    font-size: 3rem;
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.m-0 {
+    margin: 0!important;
+}
+
+.m-1 {
+    margin: 1rem!important;
+}
+
+.m-2 {
+    margin: 2rem!important;
+}
+
+.m-b-2 {
+    margin-bottom: 2rem!important;
+}
+
+.m-b-8 {
+    margin-bottom: 8rem;
+}
+
+.m-s-3 {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.p-2 {
+    padding: 1.5rem!important;
+}
+
+.c-blanco {
+    color: var(--white);
+}
+
+.c-azul {
+    color: var(--azul);
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.f-16 {
+    font-size: 1.6rem!important;
+}
+
+
+/*HEADER INDEX*/
+
+.background {
+    background-image: url(https://images.unsplash.com/photo-1529460608-bc455fccd5a4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1790&q=80);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* width: 100%; */
+}
+
+.blur {
+    background: hsla(214, 99, 54, 0.2);
+    backdrop-filter: blur(6px);
+    height: 100vh;
+    width: 100%;
+}
+
+.header a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    text-align: center;
+    padding-top: 3rem;
+    transition: color .5s;
+}
+
+.header a:hover {
+    color: var(--azul);
+}
+
+.header-content {
+    font-size: 3.6rem;
+    display: block;
+    margin: 20%;
+    padding-right: 3rem;
+}
+
+.header-content p {
+    font-size: 3rem;
+    margin-top: 0;
+    letter-spacing: 1.1rem;
+}
+
+.header-content p:last-of-type {
+    letter-spacing: normal;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header a {
+        margin: 2rem 15rem;
+        padding-top: 0;
+    }
+    .header-content {
+        padding: 0 0 0 1rem;
+    }
+}
+
+
+/*BARRA*/
+
+.barra {
+    padding: 2rem 0;
+    background-color: var(--azulOscuro);
+}
+
+.info-resumen {
+    /*margin: 0 auto;*/
+    width: 80%;
+    color: var(--azul);
+    font-size: 2rem;
+}
+
+.numero {
+    font-size: 4rem;
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .info-resumen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/*SECCIONES INDEX*/
+
+.flex-contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-mitad {
+    flex: 0 0 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.flex-img img {
+    max-width: 100%;
+    max-height: 700px;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.flex-img:nth-of-type(1) {
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    .flex-contenedor {
+        /*display: flex;*/
+        justify-content: center;
+        text-align: left;
+        flex-direction: row;
+    }
+    .flex-1 {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0 2rem;
+    }
+    .flex-img img {
+        max-width: 100%;
+        max-height: 700px;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0 2rem;
+    }
+    .flex-img:nth-of-type(1) {
+        order: initial;
+    }
+}
+
+
+/*FOOTER*/
+
+footer {
+    margin: 4rem;
+    padding: 0 2rem;
+}
+
+
+/*INICIO DE SESION*/
+
+.carta a {
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+}
+
+.carta a:hover {
+    text-decoration: underline;
+}
+
+.form-titulo {
+    font-size: 5rem;
+    color: var(--azulOscuro);
+}
+
+form.login input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 70%;
+    height: 100%;
+    margin: 2rem auto;
+    padding: .5rem 1rem;
+    font-size: 1.7rem;
+    border: 1px solid silver;
+    border-radius: 1rem;
+}
+
+form.login input:focus {
+    border: none;
+}
+
+form.login .form-bottom {
+    margin-bottom: 3.5rem;
+    font-size: 1rem;
+}
+
+form.login .form-bottom a {
+    padding-left: 3rem;
+}
+
+.close {
+    position: relative;
+    right: -170px;
+    top: -10px;
+}
+
+.close i {
+    cursor: pointer;
+    color: blue;
+    font-size: 2.5rem;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.close i:hover {
+    color: var(--azul);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+/*REGISTRO*/
+
+.img-form {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    margin: 2rem;
+}
+
+.pasos {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px
+}
+
+.pasos .centrar-texto {
+    justify-content: center;
+}
+
+.pasos li {
+    display: flex;
+    flex: 1;
+    padding: 0 .5rem;
+    overflow: hidden;
+    color: #999;
+    border-bottom: 2px solid;
+}
+
+.pasos .focus {
+    color: inherit;
+    border-bottom: 2px solid var(--azul);
+}
+
+form.registro-form p {
+    font-size: 1.2rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+
+
+/*legend {
+    font-size: 2.4rem;
+    color: #4f4f4f;
+}*/
+
+.registro-form input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.registro-form li {
+    margin-bottom: .29rem;
+}
+
+label {
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+textarea {
+    height: 6rem;
+}
+
+.form-style input,
+textarea {
+    margin: 1rem auto;
+}
+
+div.registro-2 input:not([type="submit"]) {
+    display: inline-block;
+    margin: 0 auto 1rem;
+    width: 49%;
+}
+
+.labels-2 label {
+    display: inline-block;
+    margin: 1rem auto;
+    width: 49%;
+}
+
+.flex-mitad:nth-of-type(1) {
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    .flex-mitad:nth-of-type(1) {
+        order: initial;
+    }
+}
+
+.competencias i {
+    padding: 0 .5rem;
+}
+
+.flex-contenedor-especial {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.flex-mitad-especial {
+    flex: 0 0 50%;
+    /* height: 100%; */
+    /*overflow: hidden;*/
+}
+
+
+/* @media (min-width: 768px) {
+    .flex-mitad-especial li {
+        margin-bottom: .35rem;
+    }
+} */
