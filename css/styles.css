@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
 :root {
     /*--fuentePrincipal: 'Staatliches', cursive;*/
     --azul: #1282a2;
@@ -91,11 +92,28 @@ ol {
 
 .carta-xl {
     background: var(--white);
-    width: 100%;
+    /* width: 100%; */
     padding: 30px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     font-size: 1rem;
+    flex-basis: 100%;
+}
+
+.carta-m {
+    background: var(--white);
+    /* width: 100%; */
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    font-size: 1rem;
+    /* overflow: auto; */
+}
+
+@media (min-width: 768px) {
+    .carta-m {
+        flex-basis: calc(90%/2);
+    }
 }
 
 .btn {
@@ -107,7 +125,7 @@ ol {
     font-weight: 700;
     font-size: 1.5rem;
     border-radius: .5rem;
-    border: solid 2px var(--azul);
+    border: solid 1px var(--azul);
     transition: all .5s;
 }
 
@@ -128,7 +146,6 @@ ol {
 
 .btn-azul {
     background-color: blue;
-    font-weight: 100;
     font-size: 1rem;
     padding: 1rem 3rem;
 }
@@ -166,6 +183,10 @@ ol {
     margin-right: 3rem;
 }
 
+.m-r-2 {
+    margin-right: 2rem;
+}
+
 .p-2 {
     padding: 1.5rem!important;
 }
@@ -184,6 +205,15 @@ ol {
 
 .f-16 {
     font-size: 1.6rem!important;
+}
+
+@media (max-width: 768px) {
+    .responsive {
+        display: block!important;
+    }
+    .responsive:not(:first-of-type) i {
+        display: none;
+    }
 }
 
 
@@ -528,3 +558,213 @@ div.registro-2 input:not([type="submit"]) {
         margin-bottom: .35rem;
     }
 } */
+
+
+/*PERFIL ALUMNO*/
+
+.perfil {
+    min-height: 100vh;
+    background: linear-gradient(to right top, var(--azul), var(--azulOscuro));
+    display: flex;
+}
+
+.dashboard {
+    background-color: var(--azulOscuro);
+    flex: 1;
+}
+
+.dashboard h2 {
+    margin: 3.7rem;
+    display: none;
+}
+
+.dashboard .accion {
+    padding: 2rem 1rem;
+    transition: all .5s ease;
+}
+
+.dashboard .accion i {
+    margin: 0 2rem;
+}
+
+.dashboard .accion a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.dashboard .accion:hover {
+    background-color: var(--azul);
+    cursor: pointer;
+}
+
+.perfil-contenido {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-perfil {
+    background-color: whitesmoke;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.datos-perfil h4,
+img {
+    display: inline-block;
+}
+
+.datos-perfil .usuario-info {
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.usuario-info::after {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 2px;
+    /* background-color: rgb(170, 170, 170); */
+    background-color: lightgray;
+    right: 0px;
+}
+
+.usuario-info>div {
+    margin-right: 1rem;
+}
+
+.usuario-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.datos-perfil .usuario-info p,
+h4 {
+    margin: 0;
+}
+
+.datos-perfil .usuario-info p {
+    color: gray;
+}
+
+.practicas {
+    background-color: white;
+    flex: 6;
+}
+
+.notificaciones {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.notificaciones a {
+    margin-right: 2rem;
+    color: gray;
+}
+
+.practicas-contenedor {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+}
+
+.practicas-contenedor>div {
+    margin: 1rem;
+}
+
+.practicas-contenedor>div h3,
+h4,
+p {
+    margin-top: 1rem;
+}
+
+.carta-m .carta-practicas {
+    display: flex;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.carta-m .carta-practicas::after {
+    content: '';
+    position: absolute;
+    background-color: lightgray;
+    bottom: 1px;
+    width: 90%;
+    height: 1px;
+}
+
+.carta-m .carta-practicas>div {
+    margin-right: 2.5rem;
+}
+
+.carta-m .carta-practicas img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.practica-activa {
+    position: relative;
+}
+
+.accion:not(:first-of-type) {
+    display: none;
+}
+
+.accion:first-of-type i {
+    transition: all 1s ease;
+}
+
+.accion:first-of-type:hover i {
+    transform: rotate(.25turn) scale(1.5);
+}
+
+@media (min-width: 768px) {
+    .practica-activa h4::after {
+        content: 'Práctica actual';
+        position: absolute;
+        right: -5%;
+        color: white;
+        background-color: rgba(22, 22, 240, 0.719);
+        font-size: 1rem;
+        padding: .4rem;
+        border-radius: 5px;
+        font-weight: 400;
+    }
+    .practicas-contenedor {
+        flex-direction: initial;
+        justify-content: center;
+    }
+    .accion:not(:first-of-type) {
+        display: block;
+    }
+    .accion:first-of-type {
+        display: none;
+    }
+    .dashboard h2 {
+        display: block;
+    }
+}
+
+.flex-100 {
+    flex-basis: 100%!important;
+}
+
+.carreras-req ul li {
+    display: inline-block;
+    margin: .5rem .3rem;
+    background: darkblue;
+    color: white;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.carta-m .flex-contenedor {
+    height: unset;
+}
