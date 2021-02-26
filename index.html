@@ -18,8 +18,8 @@
     <header class="background">
         <div class="blur">
             <nav class="header">
-                <a href="#"><span class="logo">PXS</span></a>
-                <a href="#" id="iniciarSesion"><i class="fas fa-user"></i> Iniciar Sesión</a>
+                <a href="#"><img src="imgBackups/practicum_2020_logo-05.png" alt="logo" class="logo"></a>
+                <a id="openPop"><i class="fas fa-user"></i> Iniciar Sesión</a>
             </nav>
             <div class="header-content c-blanco">
                 <h1>Bienvenido a PXS</h1>
@@ -28,6 +28,29 @@
             </div>
         </div>
     </header>
+    <div class="hover_bkgr_fricc" id="pop">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton" id="close">&times;</div>
+            <div class="centrar-pantalla-login">
+                <div class="carta">
+                    <img src="imgBackups/practicum_2020_logo-05.png" alt="logo" class="logo">
+                    <form action="#" class="login">
+                        <input type="text" id="usuario" placeholder="Nombre de usuario">
+                        <input type="password" name="pwd" id="pwd" placeholder="Contraseña" required>
+                        <div class="form-bottom">
+                            <input type="checkbox" name="recordar" id="recordar">
+                            <label for="recordar">Recordarme</label>
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="btn btn-azul c-blanco">Iniciar sesión</button>
+                    </form>
+                    <p>¿Aún no tienes cuenta? <a href="#">Registrate</a></p>
+                    <p>Lee nuestros <a href="#">términos de uso y aviso de privacidad</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--CERRAMOS EL PRIMER CONTENIDO-->
     <div class="barra">
         <div>
@@ -49,7 +72,7 @@
         <div class="flex-1">
             <h2>Soy Alumno</h2>
             <p>Descubre mas de 200 empresas, organizaciones, instituciones y dependencias para hacer tus practicas profesionales y vivir tu primera experiencia laboral.</p>
-            <a href="dPersonales.html" class="btn-2">Registrate como alumno <i class="fas fa-arrow-right"></i></a>
+            <a href="registro.html" class="btn-2">Registrate como alumno <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="flex-img">
             <img src="https://images.unsplash.com/photo-1539302730708-a9ccbdd8332b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
