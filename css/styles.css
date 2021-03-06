@@ -620,7 +620,7 @@ div.registro-2 input:not([type="submit"]) {
 
 .competencias i {
     padding: 0 .5rem;
-    font-size: .9rem;
+    font-size: 1.4rem;
 }
 
 @media (min-width: 768px) {
@@ -645,12 +645,22 @@ div.registro-2 input:not([type="submit"]) {
     /*overflow: hidden;*/
 }
 
+.flex-mitad-especial li {
+    font-size: 1.4rem;
+}
+
 
 /* @media (min-width: 768px) {
     .flex-mitad-especial li {
         margin-bottom: .35rem;
     }
 } */
+
+.inline-40 li {
+    display: inline-block;
+    width: 45%;
+    font-size: 1.4rem;
+}
 
 
 /*PERFIL ALUMNO*/

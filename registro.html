@@ -27,25 +27,25 @@
                     </ol>
                     <label for="imgInput" class="selectorImg"><i class="fas fa-camera"></i></label>
                     <input type="file" name="imgInput" id="imgInput" style="display: none;">
-                    <img class="img-form " src="imgBackups/photo-1491975474562-1f4e30bc9468.jfif " alt="foto_personal ">
+                    <img class="img-form " src="imgBackups/photo-1491975474562-1f4e30bc9468.jfif " alt="foto_personal " id="imgLoad">
                     <h4 class="izquierda ">Datos Personales</h4>
                     <div class="labels-2 ">
                         <label for="nombre ">Nombre(s):</label>
                         <label for="apellido ">Apellido:</label>
                     </div>
                     <div class="registro-2 centrar ">
-                        <input type="text " name="nombre " id="nombre ">
-                        <input type="text " name="apellido " id="apellido ">
+                        <input type="text " name="nombre " id="nombre">
+                        <input type="text " name="apellido " id="apellido">
                     </div>
                     <div class="izquierda ">
                         <label for="correo ">Email:</label>
-                        <input type="email " name="correo " id="correo ">
+                        <input type="email " name="correo " id="correo">
                         <label for="telefono ">Telefono:</label>
-                        <input type="tel " name="telefono " id="telefono ">
+                        <input type="tel " name="telefono " id="telefono">
                         <label for="direccion ">Dirección:</label>
                         <textarea name="direccion " id="direccion " cols="30 " rows="10 "></textarea>
                         <label for="nacioEn ">Lugar de nacimiento:</label>
-                        <input type="text " name="nacioEn " id="nacioEn ">
+                        <input type="text " name="nacioEn " id="nacioEn">
                     </div>
                 </section>
                 <section id="formacion" class="hide">
@@ -78,7 +78,7 @@
                             <input type="date" name="" id="">
                         </div>
                         <div class="derecha">
-                            <a href="#" class="btn">Agregar <i class="fas fa-plus"></i></a>
+                            <a id="agregarFormacion" class="btn">Agregar <i class="fas fa-plus"></i></a>
                         </div>
                 </section>
                 <section id="experiencia" class="hide">
@@ -106,7 +106,7 @@
                             <input type="date" name="" id="">
                         </div>
                         <div class="derecha">
-                            <a href="#" class="btn">Agregar <i class="fas fa-plus"></i></a>
+                            <a id="agregarExp" class="btn">Agregar <i class="fas fa-plus"></i></a>
                         </div>
                 </section>
                 <section class="hide" id="competencias">
@@ -120,68 +120,44 @@
                     <h4 class="izquierda">Competencias y habilidades</h4>
                     <section class="izquierda">
                         <h4>Idiomas</h4>
-                        <div class="flex-contenedor-especial">
-                            <ul class="flex-mitad-especial">
+                        <div class="inline-40">
+                            <ul id="idiomas">
                                 <li>Español</li>
+                                <li><span class="competencias c-azul"><i id="uno" class="far fa-star"></i><i id="dos" class="far fa-star"></i><i id="tres" class="far fa-star"></i><i id="cuatro" class="far fa-star"></i><i id="cinco" class="far fa-star"></i></span></li>
                                 <li>Inglés</li>
-                                <li>Francés</li>
-                                <li>Alemán</li>
-                                <li>Chino mandarin</li>
-                            </ul>
-                            <ul class="flex-mitad-especial">
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
+                                <li><span class="competencias c-azul"><i id="uno" class="far fa-star"></i><i id="dos" class="far fa-star"></i><i id="tres" class="far fa-star"></i><i id="cuatro" class="far fa-star"></i><i id="cinco" class="far fa-star"></i></span></li>
                             </ul>
                         </div>
                         <div class="derecha">
-                            <a href="#" class="btn">Agregar <i class="fas fa-plus"></i></a>
+                            <a id="agregarIdioma" class="btn">Agregar <i class="fas fa-plus"></i></a>
                         </div>
                     </section>
                     <section class="izquierda">
                         <h4>Tecnología</h4>
-                        <div class="flex-contenedor-especial">
-                            <ul class="flex-mitad-especial">
-                                <li>Español</li>
-                                <li>Inglés</li>
-                                <li>Francés</li>
-                                <li>Alemán</li>
-                                <li>Chino mandarin</li>
-                            </ul>
-                            <ul class="flex-mitad-especial">
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
+                        <div class="inline-40">
+                            <ul id="tecnologias">
+                                <li>Paqueteria Office</li>
                                 <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
                             </ul>
                         </div>
                         <div class="derecha">
-                            <a href="#" class="btn">Agregar <i class="fas fa-plus"></i></a>
+                            <a id="agregarTecnologia" class="btn">Agregar <i class="fas fa-plus"></i></a>
                         </div>
                     </section>
                     <section class="izquierda">
                         <h4>Otras habilidades</h4>
-                        <div class="flex-contenedor-especial">
-                            <ul class="flex-mitad-especial">
-                                <li>Español</li>
-                                <li>Inglés</li>
-                                <li>Francés</li>
-                                <li>Alemán</li>
-                                <li>Chino mandarin</li>
-                            </ul>
-                            <ul class="flex-mitad-especial">
-                                <input type="checkbox" name="" id="">
-                                <input type="checkbox" name="" id="">
-                                <input type="checkbox" name="" id="">
-                                <input type="checkbox" name="" id="">
-                                <input type="checkbox" name="" id="">
-                            </ul>
+                        <div id="otrasHabilidades">
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Relaciones públicas</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="some" id="some">
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Trabajo en equipo</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Comunicación asertiva</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Administración del tiempo</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
                         </div>
                         <div class="derecha">
-                            <a href="#" class="btn">Agregar <i class="fas fa-plus"></i></a>
+                            <a id="agregarOtrasHabilidades" class="btn">Agregar <i class="fas fa-plus"></i></a>
                         </div>
                     </section>
                 </section>
@@ -199,21 +175,17 @@
                         <textarea name="" id="" cols="30" rows="10"></textarea>
                         <h4>¿Donde te gustaría trabajar?</h4>
                         <p>Selecciona las opciones que te gustarian</p>
-                        <div class="flex-contenedor-especial">
-                            <ul class="flex-mitad-especial">
-                                <li>Español</li>
-                                <li>Inglés</li>
-                                <li>Francés</li>
-                                <li>Alemán</li>
-                                <li>Chino mandarin</li>
-                            </ul>
-                            <ul class="flex-mitad-especial">
-                                <input type="checkbox" name="" id="">
-                                <input type="checkbox" name="" id="">
-                                <input type="checkbox" name="" id="">
-                                <input type="checkbox" name="" id="">
-                                <input type="checkbox" name="" id="">
-                            </ul>
+                        <div>
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Empresas pequeñas</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="some" id="some">
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Empresas medianas</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Empresas Grandes</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Startups</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                            <label style="display: inline-block; width: 40%; color: black;" for="">Dependencias gubernamentales</label>
+                            <input style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
                         </div>
                         <label for="">¿Qué giros o sectores te llaman la atención?</label>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
@@ -230,10 +202,10 @@
                 <div class="c-blanco centrar-pantalla ">
                     <div class="m-b-8 m-s-3 ">
                         <p><span class="c-azul ">&#8212;Registro</span></p>
-                        <h2>Información personal</h2>
-                        <p>¡Bienvenido!</p>
-                        <p>Para empezar es momento de registrar tu información personal. Por favor, asegúrate de que tus datos sean correctos y estén completos.</p>
-                        <p><span class="c-azul ">01/05</span></p>
+                        <h2 id="titPagRegistro">Información personal</h2>
+                        <p id="titDosPagRegistro">¡Bienvenido!</p>
+                        <p id="InfPagRegistro">Para empezar es momento de registrar tu información personal. Por favor, asegúrate de que tus datos sean correctos y estén completos.</p>
+                        <p><span class="c-azul " id="numPagRegistro">01/05</span></p>
                     </div>
                 </div>
             </div>
