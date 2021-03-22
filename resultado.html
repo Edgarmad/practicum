@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <!-- ICONO DE PESTAÑA -->
+    <link rel="shortcut icon" href="https://www.miplana.mx/r_/inc/img/favicon.ico">
     <!--NORMALIZE-->
     <link rel="stylesheet" href="css/normalize.css">
     <!--ICONOS-->
@@ -16,7 +18,7 @@
 <body>
     <div class="c-azul header">
         <a href="registro.html" class=""><i class="fas fa-arrow-left"></i></a>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse beatae magni aliquid sapiente facilis, commodi fuga. Deserunt itaque laudantium ratione quos asperiores ipsam distinctio quae. Ullam ex sint adipisci.</p>
+        <h2 class="centrar-texto">Editar Perfil</h2>
         <a href="perfilAlumno.html" class="btn btn-2 p-2">Confirmar</a>
     </div>
     <main class="contenedor">
@@ -25,143 +27,138 @@
             <div class="flex-contenedor">
                 <div class="flex-mitad-especial f-16">
                     <form action=" # " class="contenedor registro-form height-100 " id="registro">
-                        <h4 class="izquierda ">Datos Personales</h4>
-                        <div class="labels-2 ">
-                            <label for="nombre ">Nombre(s):</label>
-                            <label for="apellido ">Apellido:</label>
-                        </div>
-                        <div class="registro-2 centrar ">
-                            <input disabled type="text " name="nombre " id="nombre ">
-                            <input disabled type="text " name="apellido " id="apellido ">
-                        </div>
-                        <div class="izquierda ">
-                            <label for="correo">Email:</label>
-                            <input disabled type="email " name="correo " id="correo " value="somethin@gmail.com">
-                            <label for="telefono ">Telefono:</label>
-                            <input disabled type="tel " name="telefono " id="telefono ">
-                            <label for="direccion ">Dirección:</label>
-                            <textarea disabled name="direccion " id="direccion " cols="30 " rows="10 "></textarea>
-                            <label for="nacioEn ">Lugar de nacimiento:</label>
-                            <input disabled type="text " name="nacioEn " id="nacioEn ">
-                        </div>
-                        <h4 class="izquierda">Formación Profesional</h4>
-                        <div class="izquierda">
-                            <label for="carrera">Estudio:</label>
-                            <input disabled type="text" name="carrera" id="carrera">
-                            <label for="institucion">Institucion:</label>
-                            <input disabled type="text" name="institucion" id="institucion">
-                            <label for="nivelProf">Nivel Profesional:</label>
-                            <input disabled type="text" name="nivelProf" id="nivelProf">
-                            <div class="labels-2">
-                                <label for="">Inicio:</label>
-                                <label for="">Fin:</label>
+                        <fieldset>
+                            <div class="derecha"><a class="btn" id="editarPersonales"><i class="fas fa-edit"></i></a></div>
+                            <legend class="izquierda ">Datos Personales</legend>
+                            <div class="labels-2 ">
+                                <label for="nombre ">Nombre(s):</label>
+                                <label for="apellido ">Apellido:</label>
                             </div>
-                            <div class="registro-2 centrar">
-                                <input disabled type="date" name="" id="">
-                                <input disabled type="date" name="" id="">
+                            <div class="registro-2 centrar ">
+                                <input disabled type="text " name="nombre " id="nombre">
+                                <input disabled type="text " name="apellido " id="apellido">
                             </div>
-                            <h4 class="izquierda">Experiencia laboral y profesional</h4>
-                            <label for="puesto">Puesto:</label>
-                            <input disabled type="text" name="puesto" id="puesto">
-                            <label for="lugar">Empresa o institucion:</label>
-                            <input disabled type="text" name="lugar" id="lugar">
-                            <label for="act">Actividades realizadas:</label>
-                            <textarea disabled name="act" id="act" cols="30" rows="10"></textarea>
-                            <div class="labels-2">
-                                <label for="">Inicio:</label>
-                                <label for="">Fin:</label>
+                            <div class="izquierda ">
+                                <label for="correo ">Email:</label>
+                                <input disabled type="email " name="correo " id="correo">
+                                <label for="telefono ">Telefono:</label>
+                                <input disabled type="tel " name="telefono " id="telefono">
+                                <label for="direccion ">Dirección:</label>
+                                <textarea disabled name="direccion " id="direccion " cols="30 " rows="10 "></textarea>
+                                <label for="nacioEn ">Lugar de nacimiento:</label>
+                                <input disabled type="text " name="nacioEn " id="nacioEn">
                             </div>
-                            <div class="registro-2 centrar">
-                                <input disabled type="date" name="" id="">
-                                <input disabled type="date" name="" id="">
+                        </fieldset>
+                        <fieldset>
+                            <div class="derecha"><a class="btn" id="editarFormacion"><i class="fas fa-edit"></i></a></div>
+                            <legend class="izquierda">Formación Profesional</legend>
+                            <div class="izquierda">
+                                <label for="carrera">Estudio:</label>
+                                <input disabled type="text" name="carrera" id="carrera">
+                                <label for="institucion">Institucion:</label>
+                                <input disabled type="text" name="institucion" id="institucion">
+                                <label for="nivelProf">Nivel Profesional:</label>
+                                <select disabled name="nivelProf" id="nivelProf">
+                                    <option value="" disabled>--Ingresa tu nivel de estudios--</option>
+                                    <option value="licenciatura">Licenciatura</option>
+                                    <option value="maestria">Maestria</option>
+                                    <option value="doctorado">Doctorado</option>
+                                </select>
+                                <div class="labels-2">
+                                    <label for="">Inicio:</label>
+                                    <label for="">Fin:</label>
+                                </div>
+                                <div class="registro-2 centrar">
+                                    <input disabled type="date" name="" id="">
+                                    <input disabled type="date" name="" id="">
+                                </div>
                             </div>
-                        </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="derecha"><a class="btn" id="editarExperiencia"><i class="fas fa-edit"></i></a></div>
+                            <legend class="izquierda">Experiencia laboral y profesional</legend>
+                            <div class="izquierda">
+                                <label for="puesto">Puesto:</label>
+                                <input disabled type="text" name="puesto" id="puesto">
+                                <label for="lugar">Empresa o institucion:</label>
+                                <input disabled type="text" name="lugar" id="lugar">
+                                <label for="act">Actividades realizadas:</label>
+                                <textarea disabled name="act" id="act" cols="30" rows="10"></textarea>
+                                <div class="labels-2">
+                                    <label for="">Inicio:</label>
+                                    <label for="">Fin:</label>
+                                </div>
+                                <div class="registro-2 centrar">
+                                    <input disabled type="date" name="" id="">
+                                    <input disabled type="date" name="" id="">
+                                </div>
+                            </div>
+                        </fieldset>
                     </form>
                 </div>
                 <form action="#" class="flex-mitad-especial f-16">
                     <div class="contenedor registro-form height-100">
-                        <h4 class="izquierda">Objetivos e intereses</h4>
-                        <div class="izquierda">
-                            <label for="">¿Qué estas buscando?</label>
-                            <textarea disabled name="" id="" cols="30" rows="10"></textarea>
-                            <h4>¿Donde te gustaría trabajar?</h4>
-                            <p>Selecciona las opciones que te gustarian</p>
-                            <div class="flex-contenedor-especial">
-                                <ul class="flex-mitad-especial">
-                                    <li>Español</li>
-                                    <li>Inglés</li>
-                                    <li>Francés</li>
-                                    <li>Alemán</li>
-                                    <li>Chino mandarin</li>
-                                </ul>
-                                <ul class="flex-mitad-especial">
-                                    <input disabled type="checkbox" name="" id="">
-                                    <input disabled type="checkbox" name="" id="">
-                                    <input disabled type="checkbox" name="" id="">
-                                    <input disabled type="checkbox" name="" id="">
-                                    <input disabled type="checkbox" name="" id="">
-                                </ul>
+                        <fieldset>
+                            <div class="derecha"><a class="btn" id="editarCompetencias"><i class="fas fa-edit"></i></a></div>
+                            <legend class="izquierda">Competencias y habilidades</legend>
+                            <section class="izquierda">
+                                <h4>Idiomas</h4>
+                                <div class="inline-40">
+                                    <ul id="idiomas">
+                                        <li>Español</li>
+                                        <li><span class="competencias c-azul"><i id="uno" class="far fa-star"></i><i id="dos" class="far fa-star"></i><i id="tres" class="far fa-star"></i><i id="cuatro" class="far fa-star"></i><i id="cinco" class="far fa-star"></i></span></li>
+                                        <li>Inglés</li>
+                                        <li><span class="competencias c-azul"><i id="uno" class="far fa-star"></i><i id="dos" class="far fa-star"></i><i id="tres" class="far fa-star"></i><i id="cuatro" class="far fa-star"></i><i id="cinco" class="far fa-star"></i></span></li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="izquierda">
+                                <h4>Tecnología</h4>
+                                <div class="inline-40">
+                                    <ul id="tecnologias">
+                                        <li>Paqueteria Office</li>
+                                        <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="izquierda">
+                                <h4>Otras habilidades</h4>
+                                <div id="otrasHabilidades">
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Relaciones públicas</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="some" id="some">
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Trabajo en equipo</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Comunicación asertiva</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Administración del tiempo</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                                </div>
+                            </section>
+                        </fieldset>
+                        <fieldset>
+                            <div class="derecha"><a class="btn" id="editarObjetivos"><i class="fas fa-edit"></i></a></div>
+                            <legend class="izquierda">Objetivos e intereses</legend>
+                            <div class="izquierda">
+                                <label for="">¿Qué estas buscando?</label>
+                                <textarea disabled name="" id="" cols="30" rows="10"></textarea>
+                                <h4>¿Donde te gustaría trabajar?</h4>
+                                <p>Selecciona las opciones que te gustarian</p>
+                                <div>
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Empresas pequeñas</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="some" id="some">
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Empresas medianas</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Empresas Grandes</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Startups</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                                    <label style="display: inline-block; width: 40%; color: black;" for="">Dependencias gubernamentales</label>
+                                    <input disabled style="display: inline-block; width: 50%;" type="checkbox" name="" id="">
+                                </div>
+                                <label for="">¿Qué giros o sectores te llaman la atención?</label>
+                                <textarea disabled name="" id="" cols="30" rows="10"></textarea>
                             </div>
-                            <label for="">¿Qué giros o sectores te llaman la atención?</label>
-                            <textarea disabled name="" id="" cols="30" rows="10"></textarea>
-                        </div>
-                        <h4 class="izquierda">Competencias y habilidades</h4>
-                        <section class="izquierda">
-                            <h4>Idiomas</h4>
-                            <div class="flex-contenedor-especial">
-                                <ul class="flex-mitad-especial">
-                                    <li>Español</li>
-                                    <li>Inglés</li>
-                                    <li>Francés</li>
-                                    <li>Alemán</li>
-                                    <li>Chino mandarin</li>
-                                </ul>
-                                <ul class="flex-mitad-especial">
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="izquierda">
-                            <h4>Idiomas</h4>
-                            <div class="flex-contenedor-especial">
-                                <ul class="flex-mitad-especial">
-                                    <li>Español</li>
-                                    <li>Inglés</li>
-                                    <li>Francés</li>
-                                    <li>Alemán</li>
-                                    <li>Chino mandarin</li>
-                                </ul>
-                                <ul class="flex-mitad-especial">
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                    <li><span class="competencias c-azul"><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="izquierda">
-                            <h4>Idiomas</h4>
-                            <div class="flex-contenedor-especial">
-                                <ul class="flex-mitad-especial">
-                                    <li>Español</li>
-                                    <li>Inglés</li>
-                                    <li>Francés</li>
-                                    <li>Alemán</li>
-                                    <li>Chino mandarin</li>
-                                </ul>
-                                <ul class="flex-mitad-especial">
-                                    <input disabled type="checkbox" name="" id="">
-                                    <input disabled type="checkbox" name="" id="">
-                                    <input disabled type="checkbox" name="" id="">
-                                    <input disabled type="checkbox" name="" id="">
-                                    <input disabled type="checkbox" name="" id="">
-                                </ul>
-                            </div>
+                        </fieldset>
                     </div>
                 </form>
             </div>
