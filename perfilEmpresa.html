@@ -22,17 +22,17 @@
             <div class="accion" id="burger-menu">
                 <a href="#"><i class="fas fa-bars" ></i></a>
             </div>
-            <div class="accion">
+            <div class="accion" id="vacantesBtn">
                 <i class="fas fa-file-alt"></i>
-                <a href="#">Mis Vacantes</a>
+                <a>Vacantes</a>
             </div>
-            <div class="accion">
+            <div class="accion" id="postuladosBtn">
                 <i class="fas fa-user-plus"></i>
-                <a href="#">Alumnos Postulados</a>
+                <a>Postulados</a>
             </div>
-            <div class="accion">
+            <div class="accion" id="practicantesBtn">
                 <i class="fas fa-users"></i>
-                <a href="#">Mis Practicantes</a>
+                <a>Practicantes</a>
             </div>
         </div>
         <div class="perfil-contenido">
@@ -42,60 +42,229 @@
                         <h4>Bill Gates</h4>
                         <p>Microsoft</p>
                     </div>
-                    <div>
-                        <img src="imgBackups/photo-1491975474562-1f4e30bc9468.jfif" alt="">
+                    <div id="editarPerfil">
+                        <a href="resultadoEmpresa.html" style="cursor: pointer;" onclick="desdePer()"><img src="imgBackups/photo-1491975474562-1f4e30bc9468.jfif" alt=""></a>
                     </div>
                 </div>
                 <div class="notificaciones">
                     <a href=""><i class="far fa-bell"></i></a>
-                    <a href=""><i class="fas fa-sign-out-alt"></i></a>
+                    <a href="index.html"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
             </div>
             <div class="practicas">
-                <div class="contenedor">
-                    <h2>Mis Prácticas</h2>
-                    <p>Estas son tus practicas realizadas ó en curso</p>
-                </div>
-                <div class="practicas-contenedor">
-                    <div class="carta-m">
-                        <div class="carta-practicas">
-                            <div>
-                                <img src="imgBackups/photo-1491975474562-1f4e30bc9468.jfif" alt="">
-                            </div>
-                            <div class="practica-activa">
-                                <h3 style="font-size: 2rem;">Analista contador</h3>
-                                <h4 style="font-size: 1.5rem;">Grupo Nicxa</h4>
-                                <p style="color: gray;">Carrera: Negocios</p>
-                                <p style="color: gray;">Contacto: mail@something.com</p>
-                            </div>
+                <section id="vacantes">
+                    <div class="contenedor izquierda">
+                        <div class="inline-40">
+                            <h2>Mis Vacantes</h2>
+                            <p>Actualmente ofreces las siguientes vacantes: </p>
                         </div>
-                        <div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui enim expedita neque sed sint dolores in eveniet suscipit amet saepe? Corporis, voluptatum dolor error quidem magni eos quasi illum eligendi!</p>
-                            <a href="detalles.html" class="btn">Detalles</a>
+                        <div class="inline-40 derecha">
+                            <a href="agregarVacante.html" class="btn">Agregar <i class="fas fa-plus"></i></a>
                         </div>
                     </div>
-                    <div class="carta-m">
-                        <div class="carta-practicas">
-                            <div>
-                                <img src="imgBackups/photo-1491975474562-1f4e30bc9468.jfif" alt="">
+                    <div class="practicas-contenedor centrar-flex">
+                        <div class="carta-ch">
+                            <div class="cir-gris centrar">
+                                <i class="far fa-user centrar"></i>
                             </div>
-                            <div>
-                                <h3 style="font-size: 2rem;">Analista aduanero</h3>
-                                <h4 style="font-size: 1.5rem;">Grupo Aduanero Peninsular</h4>
-                                <p style="color: gray;">Carrera: Negocios</p>
-                                <p style="color: gray;">Contacto: mail@something.com</p>
+                            <h2 class="centrar-texto m-1 f-16">Analista contador</h2>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-users m-r-2"></i><i class="fas fa-file-alt m-r-2"></i></p>
+                                    <p> 4 Vacantes</p>
+                                    <p> 8 Postulaciones</p>
+                                </div>
                             </div>
+                            <button class="btn">Editar</button>
                         </div>
-                        <div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui enim expedita neque sed sint dolores in eveniet suscipit amet saepe? Corporis, voluptatum dolor error quidem magni eos quasi illum eligendi!</p>
-                            <a href="#" class="btn">Detalles</a>
+                        <div class="carta-ch">
+                            <div class="cir-gris centrar">
+                                <i class="far fa-user centrar"></i>
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Analista aduanero</h2>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-users m-r-2"></i><i class="fas fa-file-alt m-r-2"></i></p>
+                                    <p> 4 Vacantes</p>
+                                    <p> 8 Postulaciones</p>
+                                </div>
+                            </div>
+                            <button class="btn">Editar</button>
+                        </div>
+                        <div class="carta-ch">
+                            <div class="cir-gris centrar">
+                                <i class="far fa-user centrar"></i>
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Desarrollador web</h2>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-users m-r-2"></i><i class="fas fa-file-alt m-r-2"></i></p>
+                                    <p> 4 Vacantes</p>
+                                    <p> 8 Postulaciones</p>
+                                </div>
+                            </div>
+                            <button class="btn">Editar</button>
+                        </div>
+                        <div class="carta-ch">
+                            <div class="cir-gris centrar">
+                                <i class="far fa-user centrar"></i>
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Interno cocina</h2>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-users m-r-2"></i><i class="fas fa-file-alt m-r-2"></i></p>
+                                    <p> 4 Vacantes</p>
+                                    <p> 8 Postulaciones</p>
+                                </div>
+                            </div>
+                            <button class="btn">Editar</button>
                         </div>
                     </div>
-                </div>
+                </section>
+                <section id="postulados" class="hide">
+                    <div class="contenedor izquierda">
+                        <div class="inline-40">
+                            <h2>Alumnos postulados</h2>
+                            <p>Actualmente ofreces las siguientes vacantes: </p>
+                        </div>
+                        <div class="inline-40 derecha">
+                            <a href="agregarVacante.html" class="btn">Agregar <i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="practicas-contenedor centrar-flex">
+                        <div class="carta-ch">
+                            <div class="centrar-texto">
+                                <img src="imgBackups/photo-1539302730708-a9ccbdd8332b.jfif" alt="">
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Monica López</h2>
+                            <h3 class="centrar-texto">Negocios Internacionales</h3>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-file-alt m-r-2"></i><i class="fas fa-phone m-r-2"></i><i class="fas fa-envelope m-r-2"></i></p>
+                                    <p>Analista contador</p>
+                                    <p>9994587687</p>
+                                    <p>maquinadefuego@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="centrar-texto">
+                                <button class="btn">Rechazar</button>
+                                <button class="btn">Aceptar</button>
+                            </div>         
+                        </div>
+                        <div class="carta-ch">
+                            <div class="centrar-texto">
+                                <img src="imgBackups/photo-1539302730708-a9ccbdd8332b.jfif" alt="">
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Monica López</h2>
+                            <h3 class="centrar-texto">Negocios Internacionales</h3>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-file-alt m-r-2"></i><i class="fas fa-phone m-r-2"></i><i class="fas fa-envelope m-r-2"></i></p>
+                                    <p>Analista contador</p>
+                                    <p>9994587687</p>
+                                    <p>maquinadefuego@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="centrar-texto">
+                                <button class="btn">Rechazar</button>
+                                <button class="btn">Aceptar</button>
+                            </div>         
+                        </div>
+                        <div class="carta-ch">
+                            <div class="centrar-texto">
+                                <img src="imgBackups/photo-1539302730708-a9ccbdd8332b.jfif" alt="">
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Monica López</h2>
+                            <h3 class="centrar-texto">Negocios Internacionales</h3>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-file-alt m-r-2"></i><i class="fas fa-phone m-r-2"></i><i class="fas fa-envelope m-r-2"></i></p>
+                                    <p>Analista contador</p>
+                                    <p>9994587687</p>
+                                    <p>maquinadefuego@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="centrar-texto">
+                                <button class="btn">Rechazar</button>
+                                <button class="btn">Aceptar</button>
+                            </div>         
+                        </div>
+                    </div>
+                </section>
+                <section id="practicantes" class="hide">
+                    <div class="contenedor izquierda">
+                        <div class="inline-40">
+                            <h2>Mis practicantes</h2>
+                            <p>Ellos se encuentran contigo actualmente: </p>
+                        </div>
+                        <div class="inline-40 derecha">
+                            <a href="agregarVacante.html" class="btn">Agregar <i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                    <div class="practicas-contenedor centrar-flex">
+                        <div class="carta-ch">
+                            <div class="centrar-texto">
+                                <img src="imgBackups/photo-1539302730708-a9ccbdd8332b.jfif" alt="">
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Monica López</h2>
+                            <h3 class="centrar-texto">Negocios Internacionales</h3>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-file-alt m-r-2"></i><i class="fas fa-phone m-r-2"></i><i class="fas fa-envelope m-r-2"></i></p>
+                                    <p>Analista contador</p>
+                                    <p>9994587687</p>
+                                    <p>maquinadefuego@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="centrar-texto">
+                                <label style="display: block;" for="progreso1">Progreso</label>
+                                <input type="range" name="progreso1" id="progreso1" min="0" max="100" value="25" disabled>
+                            </div>         
+                        </div>
+                        <div class="carta-ch">
+                            <div class="centrar-texto">
+                                <img src="imgBackups/photo-1539302730708-a9ccbdd8332b.jfif" alt="">
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Monica López</h2>
+                            <h3 class="centrar-texto">Negocios Internacionales</h3>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-file-alt m-r-2"></i><i class="fas fa-phone m-r-2"></i><i class="fas fa-envelope m-r-2"></i></p>
+                                    <p>Analista contador</p>
+                                    <p>9994587687</p>
+                                    <p>maquinadefuego@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="centrar-texto">
+                                <label style="display: block;" for="progreso1">Progreso</label>
+                                <input type="range" name="progreso1" id="progreso1" min="0" max="100" value="95" disabled>
+                            </div>         
+                        </div>
+                        <div class="carta-ch">
+                            <div class="centrar-texto">
+                                <img src="imgBackups/photo-1539302730708-a9ccbdd8332b.jfif" alt="">
+                            </div>
+                            <h2 class="centrar-texto m-1 f-16">Monica López</h2>
+                            <h3 class="centrar-texto">Negocios Internacionales</h3>
+                            <div class="m-2" style="color: lightgray; font-size: 1.2rem;">
+                                <div class="centrar-texto">
+                                    <p><i class="fas fa-file-alt m-r-2"></i><i class="fas fa-phone m-r-2"></i><i class="fas fa-envelope m-r-2"></i></p>
+                                    <p>Analista contador</p>
+                                    <p>9994587687</p>
+                                    <p>maquinadefuego@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="centrar-texto">
+                                <label style="display: block;" for="progreso1">Progreso</label>
+                                <input type="range" name="progreso1" id="progreso1" min="0" max="100" value="52" disabled>
+                            </div>         
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
-    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
 </body>
 
 </html>

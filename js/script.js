@@ -11,7 +11,7 @@ const dash = document.querySelectorAll(".accion");
 const continuarRegistro = document.querySelector("#continuarRegistro");
 const regresar = document.querySelector('#regresar');
 const datosPersonales = document.querySelector("#datosPersonales");
-const formacion = document.querySelector('#formacion')
+const formacion = document.querySelector('#formacion');
 const objetivos = document.querySelector("#objetivos");
 const competencias = document.querySelector('#competencias');
 const experiencia = document.querySelector("#experiencia");
@@ -26,9 +26,9 @@ if (burger && dash) {
     burger.addEventListener('click', () => {
         dash.forEach(element => {
             if (element.className == 'accion') {
-                element.className += ' responsive'
+                element.className += ' responsive';
             } else {
-                element.className = 'accion'
+                element.className = 'accion';
             }
         });
     })
@@ -405,5 +405,39 @@ if (competencias) {
                     break;
             }
         });
+    });
+}
+
+/* EDITAR PERFIL */
+const editarPersonales = document.querySelector('#editarPersonales');
+const editarFormacion = document.querySelector('#editarFormacion');
+const editarCompetencias = document.querySelector('#editarCompetencias');
+const editarExperiencias = document.querySelector('#editarExperiencias');
+const editarObjetivos = document.querySelector('#editarObjetivos');
+const idPersonales = [];
+
+/* MOVER ENTRE PAGINAS PERFIL */
+const vacantesBtn = document.querySelector('#vacantesBtn');
+const vacantes = document.querySelector('#vacantes');
+const misPracticasBtn = document.querySelector('#misPracticasBtn');
+const misPracticas = document.querySelector('#misPracticas');
+const postulacionesBtn = document.querySelector('#postulacionesBtn');
+const postulaciones = document.querySelector('#postulaciones');
+
+if (vacantes && misPracticas) {
+    vacantesBtn.addEventListener('click', () => {
+        vacantes.classList.remove('hide');
+        misPracticas.classList.add('hide');
+        postulaciones.classList.add('hide');
+    });
+    misPracticasBtn.addEventListener('click', () => {
+        vacantes.classList.add('hide');
+        misPracticas.classList.remove('hide');
+        postulaciones.classList.add('hide');
+    });
+    postulacionesBtn.addEventListener('click', () => {
+        vacantes.classList.add('hide');
+        misPracticas.classList.add('hide');
+        postulaciones.classList.remove('hide');
     });
 }

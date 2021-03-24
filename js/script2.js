@@ -1,54 +1,184 @@
-let form = document.querySelector('#registro');
-let continuar = document.querySelector('#continuar');
-let contenedor = document.querySelector('#contenedor');
-let cont = 0;
+/*VARIABLES DE INTERFAZ DEL REGISTRO DE LAS EMPRESAS*/
+const continuarRegistroEmpresa = document.querySelector("#continuarRegistroEmpresa");
+const regresarEmpresa = document.querySelector('#regresarEmpresa');
+const datosPersonalesResponsable = document.querySelector("#datosPersonalesResponsable");
+const datosEmpresa = document.querySelector('#datosEmpresa');
+const otrosDatos = document.querySelector("#otrosDatos");
+const titulo = document.querySelector('#titPagRegistroEmpresa');
+const tituloDos = document.querySelector('#titDosPagRegistroEmpresa');
+const información = document.querySelector('#InfPagRegistroEmpresa');
+const numeracion = document.querySelector('#numPagRegistroEmpresa');
 
-continuar.addEventListener('click', function() {
-    console.log('working');
-    form.remove();
-    next();
-    cont++;
-})
+/* EDITAR INFORMACIÓN EMPRESAS */
+const editarPersonales = document.querySelector('#editDatosPersonalesEmpresa');
+const editarEmpresa = document.querySelector('#editDatosEmpresa');
+const editarOtros = document.querySelector('#editarOtros');
+const idPersonales = ['nombreResponsable', 'apellidoResponsable', 'correoResponsable', 'telefonoResponsable'];
+const idEmpresa = ['nombreEmpresa', 'ciudadEmpresa', 'correoEmpresa', 'telefonoEmpresa', 'direccionEmpresa'];
+const idOtros = ['descripcionEmpresa', 'deseoAlumnoEmpresa'];
 
-function next() {
-    contenedor.innerHTML = `<form action="#" class="contenedor registro-form height-100">
-    <ol class="pasos">
-        <li class="centrar-texto">1</li>
-        <li class="centrar-texto focus">2</li>
-        <li class="centrar-texto">3</li>
-        <li class="centrar-texto">4</li>
-        <li class="centrar-texto">5</li>
-    </ol>
-    <h4 class="izquierda">Formación Profesional</h4>
-    <div class="izquierda">
-        <label for="carrera">Estudio:</label>
-        <input type="text" name="carrera" id="carrera">
-        <label for="institucion">Institucion:</label>
-        <input type="text" name="institucion" id="institucion">
-        <label for="nivelProf">Nivel Profesional:</label>
-        <select name="nivelProf" id="nivelProf">
-            <option value="" disabled>--Ingresa tu nivel de estudios--</option>
-            <option value="licenciatura">Licenciatura</option>
-            <option value="maestria">Maestria</option>
-            <option value="doctorado">Doctorado</option>
-        </select>
-        <div class="labels-2">
-            <label for="">Inicio:</label>
-            <label for="">Fin:</label>
-        </div>
-        <div class="registro-2 centrar">
-            <input type="date" name="" id="">
-            <input type="date" name="" id="">
-        </div>
-        <div class="derecha">
-            <a href="#" class="btn">Agregar <i class="fas fa-plus"></i></a>
-        </div>
-        <div class="centrar-texto">
-            <a href="dPersonales.html" class="btn-2">Volver a Datos Personales</a>
-            <a href="experiencia.html" class="btn btn-azul c-blanco" id="continuar2">Continuar prueba</a>
-            <!-- <button type="submit" class="btn btn-azul c-blanco">Continuar</button> -->
-        </div>`;
-    continuar = document.querySelector('continuar2');
-    // form = document.querySelector('#registro');
-    // document.querySelector('#contenedor');
+/* RESPONSIVO */
+const burger = document.querySelector("#burger-menu");
+const dash = document.querySelectorAll(".accion");
+
+/* EDITAR EN RESULTADOS */
+if (editarPersonales) {
+    function editar(dato, ids) {
+        dato.addEventListener('click', () => {
+            ids.forEach(element => {
+                document.getElementById(element).toggleAttribute('disabled');
+                // element.removeAttribute('disabled');
+            });
+        });
+    }
+    editar(editarPersonales, idPersonales);
+    editar(editarEmpresa, idEmpresa);
+    editar(editarOtros, idOtros);
 }
+
+
+/* IMAGEN PREVIEW */
+const imgInputEmpresa = document.querySelector("#imgInputEmpresa");
+const imgLoadEmpresa = document.querySelector("#imgLoadEmpresa");
+
+if (imgInputEmpresa && imgLoadEmpresa) {
+    function defaultBtnActive() {
+        imgInputEmpresa.click();
+    }
+    imgInputEmpresa.addEventListener("change", function() {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const result = reader.result;
+                imgLoadEmpresa.src = result;
+            }
+            reader.readAsDataURL(file);
+        }
+        console.log(file)
+    });
+}
+
+/* CAMBIO DE PAGINAS EN EL REGISTRO */
+if (continuarRegistroEmpresa && regresarEmpresa) {
+    let cont = 0;
+    continuarRegistroEmpresa.addEventListener('click', () => {
+        switch (cont) {
+            case 0:
+                datosPersonalesResponsable.classList.add('hide');
+                datosEmpresa.classList.remove('hide');
+                regresarEmpresa.textContent = 'Volver D. Responsable';
+                titulo.textContent = 'Información de la Empresa';
+                tituloDos.textContent = '¡Se parte de la formación de nuestros alumnos!';
+                información.textContent = 'Registra tu empresa. Por favor, asegúrate de que tus datos sean correctos y estén completos.';
+                numeracion.textContent = '02/03';
+                cont++;
+                break;
+            case 1:
+                datosEmpresa.classList.add('hide');
+                otrosDatos.classList.remove('hide');
+                titulo.textContent = 'Otros Datos';
+                tituloDos.textContent = '¡Ya casi terminas!';
+                información.textContent = 'Descripción de tu empresa e intereses. Por favor, asegúrate de que tus datos sean correctos y estén completos.';
+                numeracion.textContent = '03/03';
+                continuarRegistroEmpresa.textContent = 'Completar';
+                regresarEmpresa.textContent = 'Volver D. Empresa';
+                cont++;
+                break;
+            case 2:
+                continuarRegistroEmpresa.setAttribute('href', 'resultadoEmpresa.html');
+                cont = 2;
+                break;
+            default:
+                break;
+        }
+    })
+    regresarEmpresa.addEventListener('click', () => {
+        switch (cont) {
+            case 0:
+                cont = 0;
+                regresarEmpresa.setAttribute('href', 'index.html');
+                regresarEmpresa.textContent = '';
+                break;
+            case 1:
+                datosEmpresa.classList.add('hide');
+                datosPersonalesResponsable.classList.remove('hide');
+                regresarEmpresa.textContent = 'Volver a página de principal';
+                titulo.textContent = 'Información Personal del Responsable';
+                tituloDos.textContent = '¡Bienvenido!';
+                información.textContent = 'Para empezar es momento de registrar tu información personal como responsable de tu empresa. Por favor, asegúrate de que tus datos sean correctos y estén completos.';
+                numeracion.textContent = '01/03';
+                cont--;
+                break;
+            case 2:
+                otrosDatos.classList.add('hide');
+                datosEmpresa.classList.remove('hide');
+                continuarRegistroEmpresa.textContent = 'Continuar';
+                regresarEmpresa.textContent = 'Volver D. Responsable';
+                titulo.textContent = 'Información de la Empresa';
+                tituloDos.textContent = '¡Se parte de la formación de nuestros alumnos!';
+                información.textContent = 'Registra tu empresa. Por favor, asegúrate de que tus datos sean correctos y estén completos.';
+                numeracion.textContent = '02/03';
+                cont--;
+                break;
+            default:
+                break;
+        }
+    })
+}
+/* RESPONSIVO */
+if (burger && dash) {
+    burger.addEventListener('click', () => {
+        dash.forEach(element => {
+            if (element.className == 'accion') {
+                element.className += ' responsive'
+            } else {
+                element.className = 'accion'
+            }
+        });
+    })
+}
+/* MOVER ENTRE PAGINAS PERFIL */
+const vacantesBtn = document.querySelector('#vacantesBtn');
+const vacantes = document.querySelector('#vacantes');
+const postuladosBtn = document.querySelector('#postuladosBtn');
+const postulados = document.querySelector('#postulados');
+const practicantesBtn = document.querySelector('#practicantesBtn');
+const practicantes = document.querySelector('#practicantes');
+
+if (vacantes && postulados) {
+    vacantesBtn.addEventListener('click', () => {
+        vacantes.classList.remove('hide');
+        postulados.classList.add('hide');
+        practicantes.classList.add('hide');
+    });
+    postuladosBtn.addEventListener('click', () => {
+        vacantes.classList.add('hide');
+        postulados.classList.remove('hide');
+        practicantes.classList.add('hide');
+    });
+    practicantesBtn.addEventListener('click', () => {
+        vacantes.classList.add('hide');
+        postulados.classList.add('hide');
+        practicantes.classList.remove('hide');
+    });
+}
+
+// editarPersonales.addEventListener('click', () => {
+//     idPersonales.forEach(element => {
+//         document.getElementById(element).toggleAttribute('disabled');
+//         // element.removeAttribute('disabled');
+//     });
+// });
+// editarEmpresa.addEventListener('click', () => {
+//     idEmpresa.forEach(element => {
+//         document.getElementById(element).toggleAttribute('disabled');
+//         // element.removeAttribute('disabled');
+//     });
+// });
+// editarOtros.addEventListener('click', () => {
+//     idOtros.forEach(element => {
+//         document.getElementById(element).toggleAttribute('disabled');
+//         // element.removeAttribute('disabled');
+//     });
+// });

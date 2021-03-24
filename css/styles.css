@@ -80,6 +80,11 @@ ol {
     margin: 0 auto;
 }
 
+.centrar-flex {
+    justify-content: center;
+    align-items: center;
+}
+
 .izquierda {
     text-align: left;
 }
@@ -118,9 +123,20 @@ ol {
     /* overflow: auto; */
 }
 
+.carta-ch {
+    background: var(--white);
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
 @media (min-width: 768px) {
     .carta-m {
         flex-basis: calc(90%/2);
+    }
+    .carta-ch {
+        flex-basis: calc(90%/3);
     }
 }
 
@@ -225,7 +241,6 @@ ol {
         display: none;
     }
 }
-
 
 /*HEADER INDEX*/
 
@@ -565,12 +580,6 @@ form.registro-form p {
     margin: 2rem 0 0 0;
 }
 
-
-/*legend {
-    font-size: 2.4rem;
-    color: #4f4f4f;
-}*/
-
 .registro-form input:not([type="submit"]),
 textarea,
 select {
@@ -656,10 +665,9 @@ div.registro-2 input:not([type="submit"]) {
     }
 } */
 
-.inline-40 li {
+.inline-40 {
     display: inline-block;
-    width: 45%;
-    font-size: 1.4rem;
+    width: 40%;
 }
 
 
@@ -672,7 +680,7 @@ div.registro-2 input:not([type="submit"]) {
 }
 
 .dashboard {
-    background-color: var(--azulOscuro);
+    background-color: var(--black);
     flex: 1;
 }
 
@@ -913,6 +921,21 @@ p {
     content: none;
 }
 
+.flex-contenedor ul li {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .flex-contenedor ul li {
+        display: inline-block;
+        width: calc(98%/2);
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
 
 /*-----EMPRESAS-----*/
 
@@ -930,4 +953,26 @@ p {
     left: 7.8rem;
     color: var(--azul);
     cursor: pointer;
+}
+
+.cir-gris {
+    width: 75px;
+    height: 75px;
+    background-color: var(--azul);
+    border-radius: 50%;
+    position: relative;
+}
+
+.cir-gris>i {
+    position: absolute;
+    font-size: 4rem;
+    color: white;
+    top: 23%;
+    left: 28%;
+}
+
+.carta-ch img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
 }
