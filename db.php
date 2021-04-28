@@ -1,14 +1,12 @@
 <?php
 session_start();
-$dbhost = 'localhost';
+$dbhost = 'database-1.claawir8rmgn.us-east-2.rds.amazonaws.com';
 $dbname = 'sistema_practicum';
-$dbuser = 'root';
-$dbpass = '';
-$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
-if(isset($connection)){
-    print( 'DB esta conectada');
-} else{
-    print( 'DB NO esta conectada');
-}
-header('Location: admin.php');
+$dbuser = 'admin';
+$dbpass = 'sistemapracticum';
+$port = '3306';
+$connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname,$port);
+if($connection->connect_error){
+    die("Conexión fallida: ".$connection->connect_error);
+  }
 ?>

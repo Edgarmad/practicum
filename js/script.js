@@ -101,9 +101,10 @@ if (continuarRegistro && regresar) {
                 información.textContent = 'Por favor, asegúrate de que tus datos sean correctos y estén completos.';
                 numeracion.textContent = '05/05';
                 break;
-            case 4:
-                continuarRegistro.setAttribute('href', 'resultado.html')
+             case 4:
+                //continuarRegistro.setAttribute('href', 'resultado.php')
                 break;
+                
             default:
                 break;
         }
@@ -112,7 +113,7 @@ if (continuarRegistro && regresar) {
             switch (cont) {
                 case 0:
                     cont = 0;
-                    regresar.setAttribute('href', 'index.html')
+                    regresar.setAttribute('href', 'index.php')
                     continuarRegistro.textContent = 'Continuar';
                     console.log(cont);
                     break;
@@ -160,6 +161,7 @@ if (continuarRegistro && regresar) {
                     información.textContent = 'Por favor, asegúrate de que tus datos sean correctos y estén completos.';
                     numeracion.textContent = '04/05';
                     break;
+                    
                 default:
                     break;
             }
@@ -423,21 +425,32 @@ const misPracticasBtn = document.querySelector('#misPracticasBtn');
 const misPracticas = document.querySelector('#misPracticas');
 const postulacionesBtn = document.querySelector('#postulacionesBtn');
 const postulaciones = document.querySelector('#postulaciones');
+const busquedaBtn = document.querySelector('#busquedaBtn');
+const busqueda = document.querySelector('#busqueda');
 
 if (vacantes && misPracticas) {
     vacantesBtn.addEventListener('click', () => {
         vacantes.classList.remove('hide');
         misPracticas.classList.add('hide');
         postulaciones.classList.add('hide');
+        busqueda.classList.add('hide');
     });
     misPracticasBtn.addEventListener('click', () => {
         vacantes.classList.add('hide');
         misPracticas.classList.remove('hide');
         postulaciones.classList.add('hide');
+        busqueda.classList.add('hide');
     });
     postulacionesBtn.addEventListener('click', () => {
         vacantes.classList.add('hide');
         misPracticas.classList.add('hide');
         postulaciones.classList.remove('hide');
+        busqueda.classList.add('hide');
+    });
+    busquedaBtn.addEventListener('click', () => {
+        vacantes.classList.add('hide');
+        misPracticas.classList.add('hide');
+        postulaciones.classList.add('hide');
+        busqueda.classList.remove('hide');
     });
 }

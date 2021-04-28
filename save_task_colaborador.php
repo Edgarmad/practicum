@@ -1,6 +1,6 @@
 <?php
 include('db.php');
-if (isset($_POST['save_task'])) {
+if (isset($_POST['save_task_colaborador'])) {
     $name = $_POST['nombre_usuario'];
     $last_name = $_POST['apellido_usuario'];
     $email = $_POST['correo_usuario'];

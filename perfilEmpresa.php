@@ -55,15 +55,16 @@ $rol = $row['rol'];
             </div>
             <div class="accion" id="misPracticasBtn">
                 <i class="far fa-user"></i>
-                <a href="#">Agregar</a>
+                <a href="#">Agregar responsables</a>
             </div>
             <div class="accion" id="vacantesBtn">
                 <i class="fas fa-file-alt"></i>
-                <a>Quitar</a>
+                <a>Quitar responsables</a>
             </div>
             <div class="accion" id="postulacionesBtn">
                 <i class="fas fa-briefcase"></i>
-                <a href="#">Editar</a>
+                <a href="#">Editar responsables</a>
+            </div>
             </div>
         </div>
         <div class="perfil-contenido">
@@ -74,7 +75,7 @@ $rol = $row['rol'];
                         <p><?php echo $rol;?></p>
                     </div>
                     <div>
-                        <a href="resultado.html"><img src="imgBackups/photo-1491975474562-1f4e30bc9468.jfif" alt=""></a>
+                        <a href=""><img src="imgBackups/photo-1491975474562-1f4e30bc9468.jfif" alt=""></a>
                     </div>
                 </div>
                 <div class="notificaciones">
@@ -88,7 +89,7 @@ $rol = $row['rol'];
                 <section id="misPracticas">
                     <div class="contenedor">
                        <div class= "izquierda"> 
-                            <form action = "save_task.php" method = "POST" class="contenedor registro-form height-100 ">
+                            <form action = "save_task_colaborador.php" method = "POST" class="contenedor registro-form height-100 ">
                                 <div class= "form-group">
                                     <input type="text" name="nombre_usuario" class="form-control" placeholder="Nombre">
                                 </div>
@@ -110,7 +111,7 @@ $rol = $row['rol'];
                                 <div class="form-group">
                                     <input type="text" name="id_usuario" class="form-control" placeholder="ID">
                                 </div>
-                                <input type="submit" name="save_task" class="btn btn-success btn-block" value="Guardar">
+                                <input type="submit" name="save_task_colaborador" class="btn btn-success btn-block" value="Guardar">
                             </form>
                        </div>
                     </div>
@@ -119,11 +120,11 @@ $rol = $row['rol'];
                 <section id="vacantes" class="hide">
                 <div class="contenedor">
                        <div class= "card card-body"> 
-                            <form action = "delete_task.php" method = "GET" class="contenedor registro-form height-100 ">
+                            <form action = "delete_task_colaborador.php" method = "GET" class="contenedor registro-form height-100 ">
                                 <div class= "form-group">
                                     <input type="text" name="id_usuario" class="form-control" placeholder="Ingrese el ID">
                                 </div>
-                                <input type="submit" name="delete_task" class="btn btn-success btn-block" value="Borrar">
+                                <input type="submit" name="delete_task_colaborador" class="btn btn-success btn-block" value="Borrar">
                             </form>
                        </div>
                     </div>
@@ -132,11 +133,11 @@ $rol = $row['rol'];
                 <section id="postulaciones" class="hide">
                 <div class="contenedor">
                        <div class= "card card-body"> 
-                            <form action = "edit_task.php" method = "GET" class="contenedor registro-form height-100 ">
+                            <form action = "edit_task_colaborador.php" method = "GET" class="contenedor registro-form height-100 ">
                                 <div class= "form-group">
                                     <input type="text" name="id_usuario" class="form-control" placeholder="Ingrese el ID">
                                 </div>
-                                <input type="submit" name="edit_task" class="btn btn-success btn-block" value="Editar">
+                                <input type="submit" name="edit_task_colaborador" class="btn btn-success btn-block" value="Editar">
                             </form>
                        </div>
                     </div>
